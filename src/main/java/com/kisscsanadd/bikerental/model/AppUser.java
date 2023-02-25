@@ -1,24 +1,27 @@
 package com.kisscsanadd.bikerental.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class AppUser {
+public class AppUser{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
 
+    private String password;
     private String email;
+
+    private boolean enabled;
+
+    @Column(columnDefinition = "boolean default false")
+    private boolean deleted;
 
     public AppUser(String name, String email){
         this.name = name;

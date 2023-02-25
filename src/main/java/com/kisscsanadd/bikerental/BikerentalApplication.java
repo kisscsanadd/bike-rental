@@ -16,7 +16,7 @@ public class BikerentalApplication {
 		SpringApplication.run(BikerentalApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner init(AppUserRepository appUserRepository) {
 		return args -> {
 			Stream.of("Walter", "Jesse", "Jimmy", "Mike").forEach(name -> {
@@ -25,5 +25,5 @@ public class BikerentalApplication {
 			});
 			appUserRepository.findAll().forEach(System.out::println);
 		};
-	}
+	}*/
 }
