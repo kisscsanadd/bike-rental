@@ -23,4 +23,9 @@ public class AppUserController {
     void addAppUser(@RequestBody AppUser user) {
         appUserRepository.save(user);
     }
+
+    @DeleteMapping("/users")
+    void deleteAppUser(@RequestBody long id) {
+        appUserRepository.deleteById(id);
+    }
 }
